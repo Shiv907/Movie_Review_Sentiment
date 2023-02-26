@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentiment Analysis</title>
+</head>
+<body>
+  <header>
+    <h1>Movie Sentiment Analysis</h1>
+  </header>
+  
+  <nav>
+    <a href="/index">Home</a>
+    <a href="/data">Data</a>
+  </nav>
+  
+  <main>
+    <h2>Data page</h2>
+    <p>Check out other reviews in the database:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Review</th>
+          <th>Prediction</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{row["id"]}}</td>
+          <td>{{row["review"]}}</td>
+          <td>{{row["prediction"]}}</td>
+        </tr> 
+        {% endfor %}
+      </tbody>
+    </table>
+    <a class="button" href="/index">Back</a>
+  </main>
+  <footer>
+    <hr>
+  </footer>
+</body>
+</html>
